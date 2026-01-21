@@ -4,45 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <h1>🎓 Mergington High School</h1>
+        <h2>Extracurricular Activities Hub</h2>
+        <p class="tagline">Discover, Explore, and Join Your Passion</p>
+      </div>
     </header>
 
-    <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
+    <main class="container">
+      <section id="activities-container" class="activities-section">
+        <div class="section-header">
+          <h3>✨ Available Activities</h3>
+          <p class="section-subtitle">Find the perfect activity for you</p>
+        </div>
+        <div id="activities-list" class="activities-grid">
           <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+          <div class="loading">
+            <div class="spinner"></div>
+            <p>Loading activities...</p>
+          </div>
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
+      <section id="signup-container" class="signup-section">
+        <div class="section-header">
+          <h3>📋 Sign Up Today</h3>
+          <p class="section-subtitle">Join an activity and make new friends</p>
+        </div>
+        <form id="signup-form" class="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <label for="email">
+              <i class="fas fa-envelope"></i> Student Email
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              required 
+              placeholder="your-email@mergington.edu"
+              autocomplete="email"
+            />
           </div>
           <div class="form-group">
-            <label for="activity">Select Activity:</label>
+            <label for="activity">
+              <i class="fas fa-star"></i> Select Activity
+            </label>
             <select id="activity" required>
-              <option value="">-- Select an activity --</option>
+              <option value="">-- Choose an activity --</option>
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-check-circle"></i> Sign Me Up!
+          </button>
         </form>
-        <div id="message" class="hidden"></div>
+        <div id="message" class="message hidden"></div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Mergington High School</p>
+      <p>&copy; 2024 Mergington High School. All rights reserved.</p>
     </footer>
 
     <script src="app.js"></script>
