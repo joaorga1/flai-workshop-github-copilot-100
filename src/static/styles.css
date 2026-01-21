@@ -101,11 +101,24 @@ section h3 {
 }
 
 .participants-list li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #0066cc;
-  font-weight: bold;
+  content: "";
+  display: none;
+}
+
+.participants-list li .delete-btn {
+  margin-left: 10px;
+  padding: 2px 6px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.participants-list li .delete-btn:hover {
+  background-color: #b71c1c;
 }
 
 .no-participants {
